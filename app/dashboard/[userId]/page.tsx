@@ -9,6 +9,7 @@ import SendRemarkInput from '@/app/components/SendRemarkInput';
 import PatientProgressDashboard from '@/app/components/PatientProgressDashboard';
 import HomeAddressInput from '@/app/components/HomeAddressInput';
 import SpeechToText from '@/app/components/SpeechToText';
+import MedicineInput from '@/app/components/MedicineInput';
 
 const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/drqhllyex/upload';
 const UPLOAD_PRESET = 'ml_default';
@@ -299,6 +300,8 @@ export default function Dashboard() {
           familyUserId={user.userId}
           patientId={user.patientId}
         />
+        <MedicineInput familyUserId={user.userId}
+          patientId={user.patientId}/>
       </div>
     </div>
 
